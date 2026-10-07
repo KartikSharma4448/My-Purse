@@ -1,0 +1,52 @@
+# Android / Gradle generated files
+.gradle/
+.kotlin/
+.android/
+.idea/
+**/build/
+local.properties
+captures/
+.cxx/
+.externalNativeBuild/
+*.iml
+*.hprof
+
+# Signing credentials and private configuration
+keystore.properties
+keystore.*.properties
+*.jks
+*.keystore
+*.p12
+*.pfx
+*.pem
+*.key
+.env
+.env.*
+!.env.example
+google-services.json
+service-account*.json
+credentials*.json
+
+# Generated deliverables and local test data
+outputs/
+*.apk
+*.aab
+*.apks
+*.log
+*.db
+*.db-shm
+*.db-wal
+*.sqlite
+*.sqlite3
+
+# Original working assets; packaged copies are committed under app/ and startup-assets/
+/logo.png
+/loading-animation.mp4
+
+# OS and editor files
+desktop.ini
+Thumbs.db
+.DS_Store
+.vscode/
+*.swp
+*.tmp

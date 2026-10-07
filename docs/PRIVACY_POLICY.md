@@ -1,0 +1,40 @@
+# My Purse Privacy Policy
+
+Draft for owner review. Before publishing, replace the developer name and contact fields below and provide a public policy URL.
+
+Effective date: 6 October 2026
+
+Developer: [Your developer/business name]
+Contact: [Your support email]
+
+My Purse is an offline card and document organizer for Android. It does not require an account.
+
+## Information you store
+
+You may enter card reference details, titles, bank names, card types, holder names, expiry dates, optional CVVs and notes. You may import front/back ID images, PDF documents and other image files. This information is processed and stored on your device in an encrypted vault. The developer does not receive it.
+
+## Collection and tracking
+
+The app does not include advertising, analytics or remote crash-reporting services. It has no Internet permission and does not send your vault data to a server. Android and Google Play may independently process information under their own policies.
+
+## File access and sharing
+
+My Purse accesses files you select through Android's system file picker and stores an encrypted copy. The original file is not changed. If you choose Share, a decrypted temporary copy is made available to the application you choose. That application handles the shared information under its own policies. Temporary preview files are app-private and cleaned after preview use; older temporary sharing files are cleared on the next cold launch.
+
+If you choose Copy, the selected text or image is placed on Android's clipboard and can be pasted into another app. Sensitive text and image clips are marked as sensitive. Copying an image creates a temporary decrypted copy, cleaned at the next cold launch; copying and pasting uses Android's clipboard access rules.
+
+## Device authentication
+
+Optional app lock uses Android's biometric or device-authentication prompt. My Purse does not receive or store fingerprint or biometric templates. Android handles authentication.
+
+## Retention and deletion
+
+Information remains locally until you delete it, clear app data or uninstall My Purse. Android cloud backup and automatic device transfer are excluded for app data. The app provides no cloud recovery or portable backup in this version. Keep original copies of irreplaceable files.
+
+## Security
+
+The app uses database and file encryption with keys protected through Android Keystore. Security also depends on your device, operating system and screen-lock settings. No system can guarantee absolute security, including on compromised devices.
+
+## Changes and questions
+
+Updates to this policy will be published with an updated effective date. Contact the developer using the support details listed above for questions.
