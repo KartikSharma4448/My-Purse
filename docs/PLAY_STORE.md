@@ -6,7 +6,7 @@ This project builds a native Android application. Building it does not publish i
 
 1. Confirm you own the final application ID. The current ID is `com.mypurse.vault`; change it in `app/build.gradle.kts` before publishing if needed. It cannot be changed for an existing Play app.
 2. Create/retain your upload keystore and keep it outside source control. Copy `keystore.properties.example` to `keystore.properties`, supply your key details, and build `bundleRelease`. Enable Play App Signing in your Console. Do not distribute keystore passwords.
-3. Replace the contact placeholders in `PRIVACY_POLICY.md`, review the policy and host it on a public HTTPS URL. Provide the URL in Play Console and add it to your website/store support details. The app contains an offline privacy summary.
+3. Review `PRIVACY_POLICY.md`. The public policy is hosted at `https://thekartiksharma.in/my-purse/privacy.html`; verify the live page before entering it in Play Console. The same full policy is bundled in `startup-assets/privacy-policy.txt` and is accessible offline from Add Card and Import Document. Keep the web page, document and bundled text consistent when changing data practices.
 4. Upload the signed AAB to an internal testing track. Complete Data safety, content rating, target audience, app access (no login required), ads declaration (no ads), support contact, country availability and store listing.
 5. If your personal developer account falls under Google's new-account testing rules, complete the required closed test and apply for production access. As checked on 2026-10-06, this requires at least 12 continuously opted-in testers for 14 days for applicable accounts.
 6. Test an actual older Android phone, a modern ARM64 device, tablet/foldable layouts, large fonts, low storage, background lock, process death and device biometrics. Test startup playback on real hardware. Do not infer universal device support from a single emulator.
@@ -18,6 +18,8 @@ This project builds a native Android application. Building it does not publish i
 The current app has no networking permission, accounts, advertising or analytics SDKs. Personal data is processed and stored on-device. Users may explicitly share files through Android's chooser; review how the current Play form treats user-initiated sharing before submitting. Do not blindly declare this app compliant from the architecture alone. Revisit the declaration if any SDK or networking is added.
 
 ## Listing draft
+
+Release configuration: free, no ads, India only, adults aged 18 and over. Developer: Kartik Sharma (Play account: KartikSharma06). Support: kartikuma9261@gmail.com. These are release choices, not a claim that the app has been published. Legal/export declarations must be reviewed and accepted by the account owner.
 
 Name: My Purse
 

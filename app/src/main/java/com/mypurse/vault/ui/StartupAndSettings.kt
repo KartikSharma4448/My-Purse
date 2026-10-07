@@ -120,7 +120,6 @@ fun SettingsSheet(prefs: VaultPreferences,activity: FragmentActivity,bytes: Long
     val scope=rememberCoroutineScope()
     val enabled by prefs.lockEnabled.collectAsState(initial=false)
     var error by remember {mutableStateOf<String?>(null)}
-    var privacy by remember {mutableStateOf(false)}
     ModalBottomSheet(onDismissRequest=onClose,containerColor=Pale) {
         Column(Modifier.fillMaxWidth().verticalScroll(rememberScrollState()).padding(horizontal=26.dp).padding(bottom=32.dp),verticalArrangement=Arrangement.spacedBy(18.dp)) {
             Text("Settings",style=MaterialTheme.typography.headlineSmall)
@@ -141,10 +140,9 @@ fun SettingsSheet(prefs: VaultPreferences,activity: FragmentActivity,bytes: Long
             Row(Modifier.fillMaxWidth(),horizontalArrangement=Arrangement.SpaceBetween) {Text("Documents");Text(readableSize(bytes),color=Purple)}
             Text("$cards cards · $documents documents",fontSize=13.sp,color=Ink.copy(alpha=.65f))
             Text("Files stay on this device. Uninstalling My Purse or clearing app data deletes the vault. Keep original copies of important documents.",fontSize=13.sp,color=Ink.copy(alpha=.65f))
-            TextButton(onClick={privacy=true}) {Icon(Icons.Rounded.PrivacyTip,null);Spacer(Modifier.width(10.dp));Text("Privacy")}
+            PrivacyPolicyButton()
             Text("My Purse ${com.mypurse.vault.BuildConfig.VERSION_NAME}",fontSize=12.sp,color=Ink.copy(alpha=.5f))
             error?.let {Text(it,color=MaterialTheme.colorScheme.error,fontSize=13.sp)}
         }
     }
-    if(privacy) AlertDialog(onDismissRequest={privacy=false},title={Text("Your data stays yours")},text={Text("My Purse has no account, cloud sync, advertising or analytics. Card information and imported documents are encrypted on your device. Files leave the vault only when you explicitly share them. Android cloud backup and device transfer are excluded.")},confirmButton={TextButton(onClick={privacy=false}) {Text("Done")}})
 }

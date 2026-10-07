@@ -94,6 +94,7 @@ fun CardEditor(card: VaultCard?,repository: VaultRepository,onClose: ()->Unit,bu
                         onSave(VaultCard(card?.id ?: UUID.randomUUID().toString(),title.trim(),if(kind=="BANK") bank.trim() else "",if(kind=="BANK") holder.trim() else "",if(kind=="BANK") number else "",if(kind=="BANK") expiry else "",notes.trim(),color,card?.favorite ?: false,card?.createdAt ?: System.currentTimeMillis(),kind,network,if(kind=="BANK") cvv else "",card?.frontImageId.orEmpty(),card?.backImageId.orEmpty()),if(kind=="ID") front else null,if(kind=="ID") back else null)
                     }
                 },enabled=!busy,modifier=Modifier.fillMaxWidth()) {Icon(Icons.Rounded.Check,null);Spacer(Modifier.width(8.dp));Text(if(busy) "Saving..." else "Save card")}
+                PrivacyPolicyButton()
             }
         }
     }
@@ -152,7 +153,7 @@ private fun ImageUpload(label: String,uri: Uri?,imageId: String,repository: Vaul
 @Composable
 fun ImportDialog(onClose: ()->Unit,onImport: (String)->Unit) {
     var category by remember {mutableStateOf("Personal")}
-    AlertDialog(onDismissRequest=onClose,title={Text("Import document")},text={CategoryOptions(category){category=it}},
+    AlertDialog(onDismissRequest=onClose,title={Text("Import document")},text={Column {CategoryOptions(category){category=it};PrivacyPolicyButton()}},
         confirmButton={TextButton(onClick={onImport(category)}) {Text("Import")}},dismissButton={TextButton(onClick=onClose) {Text("Cancel")}})
 }
 
